@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-controller="Animations" asp-action="Index">
+    <p>
+        <input type="text" name="SearchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<!--
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+-->
+
+
+<p>
+    <a asp-controller="Animations" asp-action="Create">Create New</a>
+</p>
