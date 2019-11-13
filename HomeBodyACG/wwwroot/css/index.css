@@ -1,0 +1,197 @@
+/* body */
+body{
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    background-image: url(../image/bgd.jpg);
+    background-size: cover;
+}
+
+/* header */
+#header {
+    background: #444;
+    opacity: 0.5;
+    color: #bbb;
+    cursor: default;
+    height:50px;
+    left: 0;
+    line-height:50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+#header h1 {
+    color: inherit;
+    height: inherit;
+    left: 1.25em;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+}
+#header nav {
+    height: inherit;
+    line-height: inherit;
+    position: absolute;
+    right: 0.75em;
+    top: 0;
+    vertical-align: middle;
+}
+#header nav > ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+#header nav > ul > li {
+    display: inline-block;
+    padding-left: 0;
+}
+
+#header nav > ul > li a {
+    display: inline-block;
+    height: 2em;
+    line-height: 1.95em;
+    padding: 0 1em;
+    border-radius: 6px;
+    text-decoration: none;
+}
+#header nav > ul > li a:not(.button) {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 0;
+}
+#header .button:hover {
+    background-color: rgba(153, 153, 153, 0.25);
+}
+#header nav > ul > li .button {
+    margin: 0 0 0 0.5em;
+    position: relative;
+}
+#header .button {
+        background-color: transparent;
+        box-shadow: inset 0 0 0 2px #999;
+        color: #fff;
+    }
+#header .button:active {
+        background-color: rgba(153, 153, 153, 0.5);
+    }
+#header.alt nav > ul > li.active a:not(.button) {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+/* main */
+#main{
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 2000;
+    bottom: 50px;
+    margin-bottom: 50px;
+    height: 500px;
+    top: 50px;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+.search-box{
+    position: absolute;
+    width: 510px;
+    height: 50px;
+    right: 100px;
+    top: 200px;
+}
+#search{
+    width: 450px;
+    height: 50px;
+    opacity: 0.2;
+    float: left;
+}
+#search-button{
+    width: 50px;
+    height: 55px;
+    opacity: 0.6;
+    float: left;
+    background-image: url();
+    background: transparent;
+}
+
+
+/* footer */
+#footer{
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    bottom: 0;
+    margin-bottom: 0;
+    height: 50px;
+    text-align: center;
+    padding: 0 0 0 0;
+}
+#footer .icons a {
+        opacity: 0.35;
+    }
+#footer .icons a:hover {
+            opacity: 0.75;
+        }
+#footer .copyright {
+    color: rgb(78, 76, 76);
+    font-size: 0.9em;
+    line-height: 1em;
+    margin: 1em 0 5px 0;
+    padding: 0;
+    text-align: center;
+    }
+#footer .copyright li {
+            border-left: solid 1px #dddddd;
+            display: inline-block;
+            list-style: none;
+            margin-left: 1em;
+            padding-left: 1em;
+        }
+#footer .copyright li:first-child {
+                border-left: 0;
+                margin-left: 0;
+                padding-left: 0;
+            }
+ul {
+    list-style: disc;
+    margin: 0 0 0px 0;
+    padding-left: 1em;
+    }
+        
+ul li {
+    padding-left: 0.5em;
+    }
+        
+ul.icons {
+        cursor: default;
+        list-style: none;
+        padding-left: 0;
+        }
+        
+ul.icons li {
+        display: inline-block;
+        padding: 0 1.25em 0 0;
+        }
+        
+ul.icons li:last-child {
+        padding-right: 0;
+        }
+        
+ul.icons li .icon {
+        color: inherit;
+        }
+        
+        ul.icons li .icon:before {
+        font-size: 1.75em;
+        }
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+}

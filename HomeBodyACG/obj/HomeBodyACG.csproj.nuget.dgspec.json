@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\HomeBodyACG\\HomeBodyACG.csproj": {}
+    "C:\\Users\\asus\\Desktop\\web\\HomeBodyACG\\HomeBodyACG.csproj": {}
   },
   "projects": {
-    "G:\\HomeBodyACG\\HomeBodyACG.csproj": {
+    "C:\\Users\\asus\\Desktop\\web\\HomeBodyACG\\HomeBodyACG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\HomeBodyACG\\HomeBodyACG.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\Desktop\\web\\HomeBodyACG\\HomeBodyACG.csproj",
         "projectName": "HomeBodyACG",
-        "projectPath": "G:\\HomeBodyACG\\HomeBodyACG.csproj",
+        "projectPath": "C:\\Users\\asus\\Desktop\\web\\HomeBodyACG\\HomeBodyACG.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "G:\\HomeBodyACG\\obj\\",
+        "outputPath": "C:\\Users\\asus\\Desktop\\web\\HomeBodyACG\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -52,10 +52,6 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -68,10 +64,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
