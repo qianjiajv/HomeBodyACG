@@ -11,5 +11,6 @@ namespace HomeBodyACG.Data
         }
 
         public DbSet<Animations> Animations { get; set; }
+        
     }
 }
