@@ -7,19 +7,21 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HomeBodyACG.Data;
 using HomeBodyACG.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HomeBodyACG.Controllers
 {
     public class AnimationsController : Controller
     {
-        private readonly HomeBodyACGContext _context;
+        private readonly AnimationsContext _context;
 
-        public AnimationsController(HomeBodyACGContext context)
+        public AnimationsController(AnimationsContext context)
         {
             _context = context;
         }
 
         // GET: Animations
+        [Authorize]
         public async Task<IActionResult> Index(string searchString)
         {
             var animations = from m in _context.Animations

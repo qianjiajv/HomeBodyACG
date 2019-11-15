@@ -36,8 +36,8 @@ namespace HomeBodyACG
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddDbContext<HomeBodyACGContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("HomeBodyACGContext")));
+            services.AddDbContext<AnimationsContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("AnimationsContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,6 +57,7 @@ namespace HomeBodyACG
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

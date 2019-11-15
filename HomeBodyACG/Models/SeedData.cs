@@ -10,9 +10,9 @@ namespace MvcMovie.Models
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new HomeBodyACGContext(
+            using (var context = new AnimationsContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<HomeBodyACGContext>>()))
+                    DbContextOptions<AnimationsContext>>()))
             {
                 // Look for any movies.
                 if (context.Animations.Any())

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HomeBodyACG.Migrations
 {
-    [DbContext(typeof(HomeBodyACGContext))]
+    [DbContext(typeof(AnimationsContext))]
     [Migration("20191001143049_InitialCreate")]
     partial class InitialCreate
     {
