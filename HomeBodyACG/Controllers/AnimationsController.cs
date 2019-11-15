@@ -21,7 +21,6 @@ namespace HomeBodyACG.Controllers
         }
 
         // GET: Animations
-        [Authorize]
         public async Task<IActionResult> Index(string searchString)
         {
             var animations = from m in _context.Animations
@@ -30,6 +29,10 @@ namespace HomeBodyACG.Controllers
             if (!String.IsNullOrEmpty(searchString))
             {
                 animations = animations.Where(s => s.Title.Contains(searchString));
+            }
+            else
+            {
+                animations = animations.Where(s => s.Title.Contains(null));
             }
 
             return View(await animations.ToListAsync());
@@ -54,6 +57,7 @@ namespace HomeBodyACG.Controllers
         }
 
         // GET: Animations/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -64,6 +68,7 @@ namespace HomeBodyACG.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Create([Bind("ID,Title,ReleaseDate,Genre,Magnet")] Animations animations)
         {
             if (ModelState.IsValid)
@@ -76,6 +81,7 @@ namespace HomeBodyACG.Controllers
         }
 
         // GET: Animations/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -96,6 +102,7 @@ namespace HomeBodyACG.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(int id, [Bind("ID,Title,ReleaseDate,Genre,Magnet")] Animations animations)
         {
             if (id != animations.ID)
@@ -127,6 +134,7 @@ namespace HomeBodyACG.Controllers
         }
 
         // GET: Animations/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -145,6 +153,7 @@ namespace HomeBodyACG.Controllers
         }
 
         // POST: Animations/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

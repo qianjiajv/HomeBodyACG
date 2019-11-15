@@ -22,8 +22,9 @@
                     <div class="login_title">
                         注册
                     </div>
-                    <form action="#" method="post">
+                    <form action="#" method="post" asp-route-returnUrl="@Model.ReturnUrl">
 
+                        <div asp-validation-summary="All" class="text-danger"></div>
                         <div class="form_text_ipt">
                             <input name="username" type="text" placeholder="昵称">
                         </div>
@@ -37,11 +38,11 @@
                         </div>
                         <div class="ececk_warning"><span>密码不能为空</span></div>
                         <!--
-    <div class="form_text_ipt">
-        <input name="code" type="text" placeholder="验证码">
-    </div>
-    <div class="ececk_warning"><span>验证码不能为空</span></div>
-    -->
+                        <div class="form_text_ipt">
+                            <input name="code" type="text" placeholder="验证码">
+                        </div>
+                        <div class="ececk_warning"><span>验证码不能为空</span></div>
+                        -->
                         <div class="form_btn">
                             <button type="button" onclick="javascript:window.location.href='#'">注册</button>
                         </div>
